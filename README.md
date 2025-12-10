@@ -77,4 +77,7 @@ This project is open-source and free to use.
 
 ---
 
-If you want, I can also add **GitHub badges**, a **project logo**, or **sample Python scripts** for the 
+
+---
+
+If you want, I can also add **GitHub badges**, a **project logo**, or **sample Python scripts** for the extraction pipeline.
