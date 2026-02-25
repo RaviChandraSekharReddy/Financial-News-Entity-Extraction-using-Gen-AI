@@ -1,0 +1,4 @@
+project_id = "eepcjtkcijjczetvjhso"
+
+[functions.extract-entities]
+verify_jwt = false

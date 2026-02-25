@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 40% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+
+    --primary: 220 60% 20%;
+    --primary-foreground: 45 60% 92%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 40% 13%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 42 78% 52%;
+    --accent-foreground: 220 60% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 42 78% 52%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 220 60% 16%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 42 78% 52%;
+    --sidebar-primary-foreground: 220 60% 12%;
+    --sidebar-accent: 220 50% 22%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 40% 24%;
+    --sidebar-ring: 42 78% 52%;
+
+    /* Custom tokens */
+    --navy: 220 60% 20%;
+    --navy-deep: 220 65% 12%;
+    --navy-light: 220 40% 30%;
+    --gold: 42 78% 52%;
+    --gold-light: 42 70% 70%;
+    --gold-muted: 42 40% 85%;
+    --success: 152 60% 40%;
+    --warning: 38 92% 50%;
+
+    --gradient-navy: linear-gradient(135deg, hsl(220 65% 12%), hsl(220 60% 20%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 78% 52%), hsl(42 70% 65%));
+    --gradient-hero: linear-gradient(160deg, hsl(220 65% 10%) 0%, hsl(220 60% 18%) 50%, hsl(220 50% 25%) 100%);
+    
+    --shadow-card: 0 1px 3px hsl(220 20% 13% / 0.06), 0 4px 12px hsl(220 20% 13% / 0.04);
+    --shadow-elevated: 0 4px 16px hsl(220 20% 13% / 0.08), 0 12px 40px hsl(220 20% 13% / 0.06);
+    --shadow-gold: 0 4px 20px hsl(42 78% 52% / 0.25);
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 220 50% 7%;
+    --foreground: 220 10% 92%;
+    --card: 220 45% 10%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 45% 10%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 42 78% 52%;
+    --primary-foreground: 220 60% 12%;
+    --secondary: 220 40% 16%;
+    --secondary-foreground: 220 10% 92%;
+    --muted: 220 35% 14%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 42 78% 52%;
+    --accent-foreground: 220 60% 12%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 42 78% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(42 78% 52%), hsl(42 70% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-navy-gradient {
+    background: var(--gradient-hero);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-gold-glow {
+    box-shadow: var(--shadow-gold);
+  }
+}
